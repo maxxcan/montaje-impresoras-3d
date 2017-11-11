@@ -1,0 +1,41 @@
+#+title: Montaje de impresoras 3D
+#+Author: Patricio Martínez
+#+Email: maxxcan@gmail.com
+
+#+REVEAL_ROOT: file:/opt/reveal.js/
+#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:nil reveal_control:t
+#+OPTIONS: reveal_rolling_links:t reveal_keyboard:t reveal_overview:t num:nil
+#+OPTIONS: reveal_width:1200 reveal_height:800
+#+OPTIONS: toc:1
+#+REVEAL_MARGIN: 0.1
+#+REVEAL_MIN_SCALE: 0.5
+#+REVEAL_MAX_SCALE: 2.5
+#+REVEAL_TRANS: cube
+#+REVEAL_THEME: makers
+#+REVEAL_HLEVEL: 2
+#+REVEAL_HEAD_PREAMBLE: <meta name="description" content="A Brief Blender3d introduction for makers.">
+#+REVEAL_POSTAMBLE: <p> Created by Maxxcan. </p>
+#+REVEAL_PLUGINS: (markdown notes)
+
+
+
+* Introducción
+* Donde conseguir nuestra primera impresora 3D
+* ¿Montaje o montada?
+* Tipos de impresoras 3D
+* Materiales
+* Proyecto RepRap
+* Montaje de la impresora 3D
+** Esquema general
+** Mecánica
+*** Componentes mecánicos
+*** Motores 
+*** Extrusor
+** Electrónica
+*** Componentes electrónicos
+*** Conexión 
+*** Tarjeta controladora
+*** Cableado
+*** Carga del firmware
+
+
