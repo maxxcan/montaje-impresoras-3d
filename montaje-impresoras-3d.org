@@ -20,22 +20,55 @@
 
 
 * Introducción
-* Donde conseguir nuestra primera impresora 3D
-* ¿Montaje o montada?
+
+¿Qué es un impresora 3D?
+
+Una impresora 3D es una máquina capaz de realizar réplicas de diseños en 3D, creando piezas o maquetas volumétricas a partir de un diseño hecho por ordenador
+
+[[./img/3d-printer.jpg]]
+
+
+** Un poco de historia 
+
+En los años 1980 se desarrollaron equipos y materiales de fabricación de aditivos tempranos.4​ En 1981, Hideo Kodama, del Instituto Municipal de Investigaciones Industriales de Nagoya, inventó dos métodos de fabricación AM de un modelo de plástico tridimensional con un polímero fotoendurecible, en el que el área de exposición a los rayos UV era controlada por un patrón de máscara o transmisor de fibra de barrido.
+
+Pero el 16 de julio de 1983, Alain Le Méhauté, Olivier de Witte y Jean Claude André presentaron su patente para el proceso de estereolitografía.7​ Fue tres semanas antes de que Chuck Hull presentase su propia patente de estereolitografía. La aplicación de los inventores franceses fue abandonada por la compañía General Electric francesa (ahora Alcatel-Alsthom) y CILAS (The Laser Consortium).8​ La razón aducida fue "por falta de perspectiva empresarial".
+
+ Luego en 1984, Chuck Hull de 3D Systems Corporation10​ desarrolló un sistema prototipo basado en el proceso conocido como estereolitografía, en el que se añaden capas mediante el curado de fotopolímeros con láseres de rayos ultravioleta. Hull definió el proceso como un «sistema para generar objetos tridimensionales mediante la creación de un patrón transversal del objeto a formar».
+
+El término «impresión en 3D» se refería originalmente a un proceso que empleaba cabezales de impresión de chorro de tinta estándar y personalizados. La tecnología utilizada por la mayoría de las impresoras 3D hasta la fecha —especialmente los modelos aficionados y orientados al consumidor— es el modelado de deposición fundido, una aplicación especial de extrusión de plástico.
+
+El modelado por deposición fundida es una técnica desarrollada en el año 1980 por  S. Scott Crump y comercializada por la empresa Stratasys en el año 1990.
+
 * Tipos de impresoras 3D
-* Materiales
+
+Hay tantos tipos de impresoras como formas de crear objetos 3D
+
 * Proyecto RepRap
+
+[[./img/Reprap_Darwin.jpg]]
+
+
+El Proyecto Reprap es una iniciativa con el ánimo de crear una máquina autorreplicable que puede ser usada para prototipado rápido y manufactura. Una máquina de prototipado rápido es una Impresora 3D que es capaz de fabricar objetos en tres dimensiones a base de un modelo hecho en ordenador.
+
+[[./img/adrian-bowyer.jpg]]
+
+
+
+
+* Donde conseguir nuestra primera impresora 3D
+
+* ¿Montaje o montada?
+* Materiales
 * Montaje de la impresora 3D
 ** Esquema general
 ** Mecánica
 *** Componentes mecánicos
 *** Motores 
 *** Extrusor
-** Electrónica
+*** Electrónica
 *** Componentes electrónicos
 *** Conexión 
 *** Tarjeta controladora
 *** Cableado
 *** Carga del firmware
-
-
