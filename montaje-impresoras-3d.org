@@ -1,21 +1,19 @@
-#+title: Montaje de impresoras 3D
-#+Author: Patricio Martínez
-#+Email: maxxcan@gmail.com
+#+TITLE: Introducción al montaje de Impresoras 3D
+#+AUTHOR: Patricio Martínez
+#+DATE: \today
+#+OPTIONS: toc:nil num:nil
+#+STARTUP: beamer
+#+OPTIONS: toc:nil
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [t]
+#+LaTeX_HEADER: \usetheme{Madrid}
+#+LaTeX_HEADER: \usepackage{mathpazo}
+#+LaTeX_HEADER: \usepackage{stmaryrd}
+#+LaTeX_HEADER: \DeclareMathOperator*{\argmin}{arg\,min}
+#+LaTeX_HEADER: \DeclareMathOperator*{\argmax}{arg\,max}
+#+BEAMER_FRAME_LEVEL: 2
 
-#+REVEAL_ROOT: file:/opt/reveal.js/
-#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:nil reveal_control:t
-#+OPTIONS: reveal_rolling_links:t reveal_keyboard:t reveal_overview:t num:nil
-#+OPTIONS: reveal_width:1200 reveal_height:800
-#+OPTIONS: toc:1
-#+REVEAL_MARGIN: 0.1
-#+REVEAL_MIN_SCALE: 0.5
-#+REVEAL_MAX_SCALE: 2.5
-#+REVEAL_TRANS: cube
-#+REVEAL_THEME: makers
-#+REVEAL_HLEVEL: 2
-#+REVEAL_HEAD_PREAMBLE: <meta name="description" content="A Brief Blender3d introduction for makers.">
-#+REVEAL_POSTAMBLE: <p> Created by Maxxcan. </p>
-#+REVEAL_PLUGINS: (markdown notes)
+
 
 
 
@@ -24,51 +22,248 @@
 ¿Qué es un impresora 3D?
 
 Una impresora 3D es una máquina capaz de realizar réplicas de diseños en 3D, creando piezas o maquetas volumétricas a partir de un diseño hecho por ordenador
-
+#+ATTR_LATEX: :width 100px
 [[./img/3d-printer.jpg]]
 
+*Creación de objetos por adición acumulativa* 
+* Un poco de historia 
 
-** Un poco de historia 
+En los *años 1980* se desarrollaron equipos y materiales de *fabricación de aditivos* tempranos.​ En 1981, *Hideo Kodama*, del Instituto Municipal de Investigaciones Industriales de Nagoya, inventó dos métodos de fabricación AM de un modelo de *plástico tridimensional* con un polímero fotoendurecible, en el que el área de exposición a los *rayos UV* era controlada por un patrón de máscara o transmisor de fibra de barrido.
 
-En los años 1980 se desarrollaron equipos y materiales de fabricación de aditivos tempranos.4​ En 1981, Hideo Kodama, del Instituto Municipal de Investigaciones Industriales de Nagoya, inventó dos métodos de fabricación AM de un modelo de plástico tridimensional con un polímero fotoendurecible, en el que el área de exposición a los rayos UV era controlada por un patrón de máscara o transmisor de fibra de barrido.
+Pero el 16 de *julio de 1983, Alain Le Méhauté, Olivier de Witte y Jean Claude André* presentaron su patente para el proceso de *estereolitografía*.​ Fue tres semanas antes de que *Chuck Hull* presentase su propia patente de estereolitografía. La aplicación de los inventores franceses fue abandonada por la compañía General Electric francesa (ahora Alcatel-Alsthom) y CILAS (The Laser Consortium).​ La razón aducida fue "por falta de perspectiva empresarial".
 
-Pero el 16 de julio de 1983, Alain Le Méhauté, Olivier de Witte y Jean Claude André presentaron su patente para el proceso de estereolitografía.7​ Fue tres semanas antes de que Chuck Hull presentase su propia patente de estereolitografía. La aplicación de los inventores franceses fue abandonada por la compañía General Electric francesa (ahora Alcatel-Alsthom) y CILAS (The Laser Consortium).8​ La razón aducida fue "por falta de perspectiva empresarial".
+* Un poco de historia
+ Luego *en 1984, Chuck Hull de 3D Systems Corporation* ​ desarrolló un sistema prototipo basado en el proceso conocido como estereolitografía, en el que se añaden capas mediante el *curado de fotopolímeros* con láseres de rayos ultravioleta. Hull definió el proceso como un «sistema para generar objetos tridimensionales mediante la creación de un patrón transversal del objeto a formar».
 
- Luego en 1984, Chuck Hull de 3D Systems Corporation10​ desarrolló un sistema prototipo basado en el proceso conocido como estereolitografía, en el que se añaden capas mediante el curado de fotopolímeros con láseres de rayos ultravioleta. Hull definió el proceso como un «sistema para generar objetos tridimensionales mediante la creación de un patrón transversal del objeto a formar».
+El término «impresión en 3D» se refería originalmente a un proceso que empleaba cabezales de impresión de chorro de tinta estándar y personalizados. La tecnología utilizada por la mayoría de las impresoras 3D hasta la fecha —especialmente los modelos aficionados y orientados al consumidor— es el modelado de *deposición fundido*, una aplicación especial de extrusión de plástico.
 
-El término «impresión en 3D» se refería originalmente a un proceso que empleaba cabezales de impresión de chorro de tinta estándar y personalizados. La tecnología utilizada por la mayoría de las impresoras 3D hasta la fecha —especialmente los modelos aficionados y orientados al consumidor— es el modelado de deposición fundido, una aplicación especial de extrusión de plástico.
-
-El modelado por deposición fundida es una técnica desarrollada en el año 1980 por  S. Scott Crump y comercializada por la empresa Stratasys en el año 1990.
+El modelado por deposición fundida es una *técnica desarrollada en el año 1980 por  S. Scott Crump* y comercializada por la *empresa Stratasys* en el año 1990.
 
 * Tipos de impresoras 3D
 
 Hay tantos tipos de impresoras como formas de crear objetos 3D
 
+*Impresión por deposición de plástico fundido*
+
+#+ATTR_LATEX: :width 150px
+[[./img/esquema-mendel.png]]
+
+#+ATTR_LATEX: :width 100px
+[[./img/impresora-3d-deposito.jpg]]
+
+* Tipos de impresora 
+
+*Impresoras 3D por Estereolitografía (SLA)*
+
+Consiste en la aplicación de un haz de luz ultravioleta a una resina líquida (contenida en un cubo) sensible a la luz. La luz UV va solidificando la resina capa por capa
+
+#+ATTR_LATEX: :width 150px
+[[./img/sla.jpg]]
+
+* Tipos de impresoras 
+
+*DLP (digital light processing) *
+
+Un fotopolímero o resina se exponen a una luz que cura el material para conformar un objeto a partir de un diseño digital directamente.
+
+#+ATTR_LATEX: :width 260px
+[[./img/estereo.jpg]]
+
+
+Esta [[https://kitprinter3d.com/es/kits-impresora-3d/127-kit-impresora-3d-sladlp-solidray.html#/con-proyector-no/color-negro/cubeta-flex-vat][impresora libre]] es muy interesante.
+
+* Tipos de impresoras 
+
+*Impresoras 3D de Sinterización Selectiva por Láser (SLS)* 
+
+Nació en los años 80, y pese a tener ciertas similitudes con la tecnología SLA, ésta permite utilizar un gran número de materiales en polvo (cerámica, cristal, nylon, poliestireno, etc.)
+
+#+ATTR_LATEX: :width 220px 
+[[./img/sls.png]]
+
+
+* Tipos de impresoras 
+
+*Impresoras 3D por Inyección*
+
+Este es el sistema de impresión 3D más parecido a una impresora habitual (de tinta en folio), pero en lugar de inyectar gotas de tinta en el papel, inyectan capas de fotopolímero líquido que se pueden curar en la bandeja de construcción.
+
+#+ATTR_LATEX: :width 200
+[[./img/injeccion.png]]
+
+
 * Proyecto RepRap
 
+#+ATTR_LATEX: :width 100
 [[./img/Reprap_Darwin.jpg]]
 
 
-El Proyecto Reprap es una iniciativa con el ánimo de crear una máquina autorreplicable que puede ser usada para prototipado rápido y manufactura. Una máquina de prototipado rápido es una Impresora 3D que es capaz de fabricar objetos en tres dimensiones a base de un modelo hecho en ordenador.
+El Proyecto Reprap es una iniciativa con el ánimo de crear una máquina autorreplicable que puede ser usada para prototipado rápido y manufactura. Una máquina de prototipado rápido es una Impresora 3D que es capaz de fabricar objetos en tres dimensiones a base de un modelo hecho en ordenador. [[http://reprap.org/][Proyecto RepRap]]
 
+* El autor 
+La persona gracias a la que disponemos de impresoras caseras es:
+
+#+ATTR_LATEX: :width 150px
 [[./img/adrian-bowyer.jpg]]
 
-
-
-
+\begin{center}
+\textbf{Adrian Bowyer}
+\end{center}
 * Donde conseguir nuestra primera impresora 3D
 
+
+Buena pregunta. 
+
+A día de hoy podemos comprar tanto impresoras como Kits de montaje en muchas superficies y de muchas formas.
+
+#+BEAMER: \pause 
++ En tiendas especializadas en la impresión 3D
+#+BEAMER: \pause
++ En tiendas especializadas en electrónica 
+#+BEAMER: \pause
++ En grandes almacenes
+#+BEAMER: \pause 
++ En las grandes tiendas de internet (Amazon, Ali Express, etc.)
+
 * ¿Montaje o montada?
+
+Tenemos la opción de comprar una impresora ya montada o un kit para montaje, o comprar las piezas por nuestra cuenta. 
+Ambas soluciones tienen sus ventajas e inconvenientes. 
+
+#+ATTR_LATEX: :width 100px
+[[./img/davinci.png]]
+
+Impresora [[https://www.xyzprinting.com/en-GB/][Davinci]] de XYZ
+
+* ¿Montaje o montada?
+
+Ventajas y desventajas de una impresora montada
+
+Ventajas:
+
+#+BEAMER: \pause 
++ Funciona a la primera
+#+BEAMER: \pause  
++ Se nos asegura una buena calidad de impresión
+#+BEAMER: \pause 
++ Podemos disponer de un servicio técnico
+#+BEAMER: \pause  
++ No requerimos de mayores conocimientos 
+
+Desventajas:
+
++ Dependemos del fabricante
+#+BEAMER: \pause 
++ Dependemos del servicio técnico
+#+BEAMER: \pause  
++ Los precios suelen ser mayores
+#+BEAMER: \pause 
++ Una rotura de un componente puede suponer el cambio de toda la impresora
+#+BEAMER: \pause 
++ No aprendemos más (esto no tiene por qué ser un inconveniente)
+
+
+
+* ¿Montaje o montada?
+
+Ventajas y Desventajas de un kit de impresión 3D
+
+#+BEAMER: \pause 
+Ventajas:
+#+BEAMER: \pause 
++ Suele ser más barato
+#+BEAMER: \pause  
++ Control absoluto sobre toda la impresora
+#+BEAMER: \pause 
++ Aprendizaje de una gran cantidad de materias
+#+BEAMER: \pause 
++ Una reparación no genera ningún problema
+#+BEAMER: \pause 
++ Puedes digievolcuionarla en cualquier momento
+
+#+BEAMER: \pause 
+Desventajas: 
+
+#+BEAMER: \pause 
++ Todas las que imagines y unas cuanta más
+#+BEAMER: \pause 
++ Pude que nunca la montes 
+#+BEAMER: \pause  
++ No tiene por qué imprimir bien o simplemente no tiene por qué imprimir
+#+BEAMER: \pause 
++ Ocupa espacio en el trastero
+
+
 * Materiales
+
+Disponemos de una gran cantidad de materiales aunque hablaremos principalmente de 3.
+#+ATTR_LATEX: :width 200px
+[[./img/materiales.jpg]]
+
+* Materiales 
+
+Para saber más os dejo un par de *Enlaces* 
+
++ La [[https://impresoras3d.com/blogs/noticias/108879559-la-guia-definitiva-sobre-los-distintos-filamentos-para-impresoras-3d][Guía definitiva de materiales]]
++ [[https://www.3dnatives.com/es/materiales-impresion-3d-sorprendentes-210320172/][Top 12 de Materiales sorprendentes con los que imprimir]]
++ [[https://all3dp.com/1/3d-printer-filament-types-3d-printing-3d-filament/][O en inglés..]]
+
+#+ATTR_LATEX: :width 200px
+[[./img/filamento-madera.jpg]]
+
+
 * Montaje de la impresora 3D
-** Esquema general
-** Mecánica
-*** Componentes mecánicos
-*** Motores 
-*** Extrusor
-*** Electrónica
-*** Componentes electrónicos
-*** Conexión 
-*** Tarjeta controladora
-*** Cableado
-*** Carga del firmware
+Ahora que hemos decidido embarcarnos en el *Maravilloso Mundo del Montaje de Impresoras* déjeme darle la *Enhorabuena* y el *Pésame* al mismo tiempo.
+
+Puede que se haya embarcado en un *viaje sin fin* que puede que le sea *maravilloso* o una *tortura*. 
+
+* Esquema general
+
+En el *Proyecto Clone Wars* tenemos un [[https://www.youtube.com/watch?v=Yhsyl0RgbgI][bonito video]] donde nos resume el montaje de una forma rápida. 
+
+#+ATTR_LATEX: :width 200px
+[[./img/video-prusa.png]]
+
+* Montaje 
+
+El montaje de la impresora lo vamos a dividir en:
+
+#+BEAMER: \pause 
+1. Parte mecánica
+#+BEAMER: \pause  
+2. Parte electrónica
+
+* Componentes mecánicos
+
+#+ATTR_LATEX: :width 200px
+[[./img/tornilleria.png]]
+
+Y os dejo un [[https://impresoras3dlowcost.com/16-tornillos-tuercas-arandelas][enlace]]
+
+* Motores 
+
+#+ATTR_LATEX: :width 200px
+[[./img/motores.jpg]]
+
+
+* Hotend
+ 
+En el *extrusor* hay que pararse un poco ya que hay muchos *modelos y medidas*. Una buena comparativa la podéis encontrar [[http://reprap.org/wiki/Hot_End_Comparison][aquí]]
+
+#+ATTR_LATEX: :width 200px
+[[./img/hotend.jpg]] 
+
+* Electrónica
+
+#+ATTR_LATEX: :width 200px
+[[./img/electronica3d.jpg]]
+
+Yo recomiendo [[http://gadgets3d.com/beta/index.php?route=product/category&path=61][esta página]]
+
+
+* Carga del firmware 
+
+El recomendado y el que todos usamos es [[http://marlinfw.org/][Marlin]]
+
+#+ATTR_LATEX: :width 200px
+[[./img/marlin.png]]
